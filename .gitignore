@@ -1,0 +1,17 @@
+*.iml
+*.swp
+*.ipr
+*.iws
+*.jpg
+.idea/
+*.exe
+*.tar.gz
+.tmp/
+output.txt
+__pycache__
+
+target/
+*.jar
+
+sett_help.xml
+sett.xml
