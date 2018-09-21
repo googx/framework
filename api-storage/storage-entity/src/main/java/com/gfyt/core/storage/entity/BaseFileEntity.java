@@ -19,7 +19,7 @@ import java.io.File;
  * @NeedThreadSave false
  * * @CompanySite <a href="https://www.58chedai.com">访问公司主页</a>
  */
-public interface BaseFileEntity
+public interface BaseFileEntity extends BaseEntity
 {
 	File getEntity();
 }

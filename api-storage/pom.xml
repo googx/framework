@@ -13,6 +13,7 @@
     <modules>
         <module>storage-Api</module>
         <module>storage-entity</module>
+        <module>storage-db</module>
     </modules>
 
 </project>

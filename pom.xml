@@ -21,7 +21,7 @@
             <repositories>
                 <repository>
                     <id>nexus3-maven-public-release</id>
-                    <url>http://nexus.gfyt.com/repository/maven-public/</url>
+                    <url>http://nexus.gfyt.lan/repository/maven-public/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -32,7 +32,7 @@
 
                 <repository>
                     <id>nexus3-maven-public-snapshots</id>
-                    <url>http://nexus.gfyt.com/repository/gfyt-snapshots/</url>
+                    <url>http://nexus.gfyt.lan/repository/gfyt-snapshots/</url>
                     <releases>
                         <enabled>false</enabled>
                     </releases>
@@ -48,7 +48,7 @@
                 <!--插件库地址-->
                 <pluginRepository>
                     <id>gfyt-mint-maven-read-plugin-public</id>
-                    <url>http://nexus.gfyt.com/repository/maven-public/</url>
+                    <url>http://nexus.gfyt.lan/repository/maven-public/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -61,8 +61,75 @@
     </profiles>
     <modules>
         <module>commons</module>
-        <module>api-ui-web</module>
         <module>api-storage</module>
         <module>service</module>
+        <module>api-ui-web</module>
+        <module>testttt</module>
+        <module>api-ui-web</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+            <!--配置生成源码包 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--配置生成Javadoc包 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <aggregate>true</aggregate>
+                    <charset>UTF-8</charset>
+                    <docencoding>UTF-8</docencoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- 项目发布 ,id要和maven-setting文件的server节点的id一致 -->
+    <distributionManagement>
+
+        <repository>
+            <id>apiTester-release</id>
+            <name>apiTester-release</name>
+            <url>http://nexus.gfyt.lan/repository/apiTester</url>
+            <uniqueVersion>true</uniqueVersion>
+        </repository>
+        <snapshotRepository>
+            <id>thriftDemo-snapshot</id>
+            <name>thriftDemo-snapshot</name>
+            <url>http://nexus.gfyt.lan/repository/apiTester-snapshot</url>
+            <uniqueVersion>true</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
