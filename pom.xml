@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gfyt.vrv</groupId>
+    <artifactId>apiTester</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <profiles>
+
+        <profile>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <id>default-gfyt-repository</id>
+            <repositories>
+                <repository>
+                    <id>nexus3-maven-public-release</id>
+                    <url>http://nexus.gfyt.com/repository/maven-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>nexus3-maven-public-snapshots</id>
+                    <url>http://nexus.gfyt.com/repository/gfyt-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+
+            </repositories>
+
+
+            <pluginRepositories>
+                <!--插件库地址-->
+                <pluginRepository>
+                    <id>gfyt-mint-maven-read-plugin-public</id>
+                    <url>http://nexus.gfyt.com/repository/maven-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <modules>
+        <module>commons</module>
+        <module>api_ui_web</module>
+        <module>api-ui-web</module>
+        <module>api-ui-web</module>
+    </modules>
+</project>
