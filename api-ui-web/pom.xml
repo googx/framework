@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 用作核心功能的ui层web视图 -->
     <artifactId>api-ui-web</artifactId>
 
 
