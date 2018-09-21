@@ -61,8 +61,8 @@
     </profiles>
     <modules>
         <module>commons</module>
-        <module>api_ui_web</module>
         <module>api-ui-web</module>
-        <module>api-ui-web</module>
+        <module>api-storage</module>
+        <module>service</module>
     </modules>
 </project>

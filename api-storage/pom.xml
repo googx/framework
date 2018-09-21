@@ -8,16 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <!-- 用作核心功能的ui层web视图 -->
-    <artifactId>api-ui-web</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.gfyt.vrv</groupId>
-            <artifactId>service-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <artifactId>api-storage</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>storage-Api</module>
+        <module>storage-entity</module>
+    </modules>
 
 </project>
