@@ -1,4 +1,6 @@
-package com.gfyt.commons.io;
+package com.gfyt.core.web;
+
+import com.gfyt.core.service.BaseService;
 
 /**
  * <b>功能说明:</b><p>
@@ -11,14 +13,15 @@ package com.gfyt.commons.io;
  * </p>
  *
  * @author hanxu
- * @CreateDate 2018-09-21 下午4:32
+ * @CreateDate 2018-09-21 下午5:46
  * @Encoding UTF-8
  * @Version 1.0
  * @NeedThreadSave false
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
-public class FileUtil
+public class TestController
 {
+	//	private final Logger logger = LoggerFactory.getLogger(TestController.class);
 
 }

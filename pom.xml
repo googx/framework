@@ -63,9 +63,7 @@
         <module>commons</module>
         <module>api-storage</module>
         <module>service</module>
-        <module>api-ui-web</module>
-        <module>testttt</module>
-        <module>api-ui-web</module>
+        <module>api-web</module>
     </modules>
 
     <build>
