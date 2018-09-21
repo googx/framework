@@ -20,5 +20,5 @@ package com.gfyt.commons.io;
  */
 public class FileUtil
 {
-	
+
 }
