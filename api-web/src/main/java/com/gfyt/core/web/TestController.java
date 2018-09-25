@@ -1,7 +1,7 @@
 package com.gfyt.core.web;
 
 import com.gfyt.core.service.BaseService;
-import com.gfyt.core.storage.entity.BaseEntity;
+import com.gfyt.core.storage.entity.AbstoryFileEntity;
 
 /**
  * <b>功能说明:</b><p>
@@ -24,5 +24,13 @@ import com.gfyt.core.storage.entity.BaseEntity;
 public class TestController
 {
 	//	private final Logger logger = LoggerFactory.getLogger(TestController.class);
-	BaseService<BaseEntity> baseService;
+	BaseService<AbstoryFileEntity> baseService;
+
+	@RequestMapping(value = "/test")
+	public void test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
+	{
+		//TODO 暂未实现 by hanxu at 18-9-25-上午10:03
+
+	}
+			
 }
