@@ -23,6 +23,7 @@
 
     <modules>
         <module>bean-entity</module>
+        <module>bean-start</module>
     </modules>
 
     <properties>

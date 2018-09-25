@@ -1,7 +1,9 @@
 package com.gfyt.core.web;
 
-import com.gfyt.core.bean.entity.AbstoryFileEntity;
-import com.gfyt.core.service.BaseService;
+import com.gfyt.core.bean.entity.BaseResult;
+import com.gfyt.core.bean.entity.test.TestEntity;
+import com.gfyt.core.service.test.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -31,13 +33,16 @@ import javax.servlet.http.HttpServletResponse;
 public class TestController
 {
 	//	private final Logger logger = LoggerFactory.getLogger(TestController.class);
-	BaseService<AbstoryFileEntity> baseService;
+	@Autowired
+	private TestService testService;
 
 	@RequestMapping(value = "/v1")
 	public String test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
 	{
-		return  "hello,core";
 
+		TestEntity entity = new TestEntity();
+		BaseResult save = testService.save(entity);
+		return "ok";
 	}
 			
 }
