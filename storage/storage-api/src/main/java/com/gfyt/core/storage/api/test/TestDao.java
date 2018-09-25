@@ -1,10 +1,7 @@
 package com.gfyt.core.storage.api.test;
 
-import java.util.*;
-import java.lang.*;
-
+import com.gfyt.core.bean.entity.test.TestEntity;
 import com.gfyt.core.storage.api.BaseDao;
-import com.gfyt.core.storage.entity.test.TestEntity;
 
 /**
  * <b>功能说明:</b><p>

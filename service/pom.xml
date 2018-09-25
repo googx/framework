@@ -32,7 +32,7 @@
 
             <dependency>
                 <groupId>com.gfyt.vrv</groupId>
-                <artifactId>api-storage</artifactId>
+                <artifactId>storage</artifactId>
                 <version>${version-framework-core}</version>
                 <type>pom</type>
                 <scope>import</scope>

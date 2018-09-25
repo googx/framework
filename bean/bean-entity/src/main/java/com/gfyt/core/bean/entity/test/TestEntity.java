@@ -1,6 +1,6 @@
-package com.gfyt.core.storage.entity.test;
+package com.gfyt.core.bean.entity.test;
 
-import com.gfyt.core.storage.entity.BaseEntity;
+import com.gfyt.core.bean.entity.BaseEntity;
 
 /**
  * <b>功能说明:</b><p>

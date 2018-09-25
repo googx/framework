@@ -1,7 +1,7 @@
 package com.gfyt.core.service;
 
-import com.gfyt.core.storage.entity.BaseEntity;
-import com.gfyt.core.storage.entity.BaseResult;
+import com.gfyt.core.bean.entity.BaseEntity;
+import com.gfyt.core.bean.entity.BaseResult;
 
 /**
  * <b>功能说明:</b><p>

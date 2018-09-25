@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>apiTester</artifactId>
+        <groupId>com.gfyt.vrv</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <artifactId>bean</artifactId>
+
+    <description>
+        JavaBean 是一种JAVA语言写成的可重用组件。它的方法命名，构造及行为必须符合特定的约定：
+        这个类必须有一个公共的缺省构造函数。
+        这个类的属性使用getter和setter来访问，其他方法遵从标准命名规范。
+        这个类应是可序列化的。
+        因为这些要求主要是靠约定而不是靠实现接口，所以许多开发者把JavaBean看作遵从特定命名约定的POJO。
+        简而言之，当一个Pojo可序列化，有一个无参的构造函数，使用getter和setter方法来访问属性时，他就是一个JavaBean。
+    </description>
+
+
+    <modules>
+        <module>bean-entity</module>
+    </modules>
+
+    <properties>
+        <version-bean-entity>1.0-SNAPSHOT</version-bean-entity>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>bean-entity</artifactId>
+                <version>${version-bean-entity}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

@@ -1,10 +1,7 @@
-import com.gfyt.core.service.BaseService;
+import com.gfyt.core.bean.entity.BaseResult;
+import com.gfyt.core.bean.entity.test.TestEntity;
 import com.gfyt.core.service.test.TestService;
 import com.gfyt.core.storage.api.test.TestDao;
-import com.gfyt.core.storage.entity.AbstoryFileEntity;
-import com.gfyt.core.storage.entity.BaseEntity;
-import com.gfyt.core.storage.entity.BaseResult;
-import com.gfyt.core.storage.entity.test.TestEntity;
 
 /**
  * <b>功能说明:</b><p>

@@ -12,9 +12,10 @@
     <artifactId>storage-api</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>com.gfyt.vrv</groupId>
-            <artifactId>storage-entity</artifactId>
+            <artifactId>bean-entity</artifactId>
         </dependency>
     </dependencies>
 

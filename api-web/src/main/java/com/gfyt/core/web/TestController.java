@@ -1,9 +1,8 @@
 package com.gfyt.core.web;
 
+import com.gfyt.core.bean.entity.AbstoryFileEntity;
 import com.gfyt.core.service.BaseService;
-import com.gfyt.core.storage.entity.AbstoryFileEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;

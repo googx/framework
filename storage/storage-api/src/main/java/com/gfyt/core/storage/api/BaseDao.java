@@ -1,7 +1,7 @@
 package com.gfyt.core.storage.api;
 
-import com.gfyt.core.storage.entity.BaseEntity;
-import com.gfyt.core.storage.entity.BaseResult;
+import com.gfyt.core.bean.entity.BaseEntity;
+import com.gfyt.core.bean.entity.BaseResult;
 
 /**
  * <b>功能说明:</b><p>
@@ -18,7 +18,7 @@ import com.gfyt.core.storage.entity.BaseResult;
  * @Encoding UTF-8
  * @Version 1.0
  * @NeedThreadSave false
- * * @CompanySite <a href="https://www.58chedai.com">访问公司主页</a>
+ *
  */
 public interface BaseDao<T extends BaseEntity>
 {

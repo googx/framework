@@ -1,4 +1,4 @@
-package com.gfyt.core.storage.entity;
+package com.gfyt.core.bean.entity;
 
 import java.io.File;
 

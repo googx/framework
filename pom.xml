@@ -33,6 +33,7 @@
         <module>storage</module>
         <module>service</module>
         <module>api-web</module>
+        <module>bean</module>
     </modules>
 
 
