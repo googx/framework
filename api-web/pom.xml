@@ -12,17 +12,42 @@
     <artifactId>api-web</artifactId>
 
 
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>service</artifactId>
+                <version>${version-framework-core}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
     <dependencies>
+
         <dependency>
             <groupId>com.gfyt.vrv</groupId>
             <artifactId>service-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--暂时这样,后续,这个start,tomcat包应该交给具体的业务工程去引入,spring的配置文件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+
+
 
     </dependencies>
 

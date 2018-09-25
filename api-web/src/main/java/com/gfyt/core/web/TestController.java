@@ -2,6 +2,10 @@ package com.gfyt.core.web;
 
 import com.gfyt.core.service.BaseService;
 import com.gfyt.core.storage.entity.AbstoryFileEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <b>功能说明:</b><p>

@@ -12,4 +12,11 @@
     <artifactId>storage-db</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.gfyt.vrv</groupId>
+            <artifactId>storage-api</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
