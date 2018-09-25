@@ -13,5 +13,6 @@ __pycache__
 target/
 *.jar
 out/
+nohup.out
 sett_help.xml
 sett.xml

@@ -1,8 +1,3 @@
-package com.gfyt.core.web;
-
-import com.gfyt.core.service.BaseService;
-import com.gfyt.core.storage.entity.BaseEntity;
-
 /**
  * <b>功能说明:</b><p>
  * 一些说明写这里
@@ -14,15 +9,14 @@ import com.gfyt.core.storage.entity.BaseEntity;
  * </p>
  *
  * @author hanxu
- * @CreateDate 2018-09-21 下午5:46
+ * @CreateDate 2018-09-25 上午9:27
  * @Encoding UTF-8
  * @Version 1.0
  * @NeedThreadSave false
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
-public class TestController
+public class TestService
 {
-	//	private final Logger logger = LoggerFactory.getLogger(TestController.class);
-	BaseService<BaseEntity> baseService;
+
 }
