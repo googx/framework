@@ -20,6 +20,13 @@
         <version-storage-api>1.0-SNAPSHOT</version-storage-api>
         <!--<version-storage-entity>1.0-SNAPSHOT</version-storage-entity>-->
         <version-storage-db>1.0-SNAPSHOT</version-storage-db>
+        <!-- ###START###第三方框架,版本控制###START###-->
+        <!-- 在mybatis-spring-start- 1.3.1的版本为依赖345 -->
+        <!--<version-mybatis>3.4.5</version-mybatis>-->
+
+        <!-- ###END######END###-->
+
+
     </properties>
 
     <dependencyManagement>
@@ -32,6 +39,7 @@
                 <scope>import</scope>
             </dependency>
 
+
             <dependency>
                 <groupId>com.gfyt.vrv</groupId>
                 <artifactId>common</artifactId>
@@ -39,7 +47,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
- 
+
             <dependency>
                 <groupId>com.gfyt.vrv</groupId>
                 <artifactId>storage-api</artifactId>
@@ -51,6 +59,14 @@
                 <artifactId>storage-db</artifactId>
                 <version>${version-storage-db}</version>
             </dependency>
+
+            <!--  <dependency>
+                  <groupId>org.mybatis</groupId>
+                  <artifactId>mybatis</artifactId>
+                  <version>${version-mybatis}</version>
+              </dependency>-->
+
+
         </dependencies>
     </dependencyManagement>
 

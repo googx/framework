@@ -24,6 +24,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
@@ -143,13 +145,13 @@
         <repository>
             <id>apiTester-release</id>
             <name>apiTester-release</name>
-            <url>http://nexus.gfyt.lan/repository/apiTester</url>
+            <url>http://nexus.gfyt.lan/repository/gfytDevRepo</url>
             <uniqueVersion>true</uniqueVersion>
         </repository>
         <snapshotRepository>
             <id>thriftDemo-snapshot</id>
             <name>thriftDemo-snapshot</name>
-            <url>http://nexus.gfyt.lan/repository/apiTester-snapshot</url>
+            <url>http://nexus.gfyt.lan/repository/gfyt-snapshots</url>
             <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
