@@ -30,7 +30,7 @@
 
     <modules>
         <module>commons</module>
-        <module>api-storage</module>
+        <module>storage</module>
         <module>service</module>
         <module>api-web</module>
     </modules>

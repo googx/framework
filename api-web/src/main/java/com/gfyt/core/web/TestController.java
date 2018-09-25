@@ -2,6 +2,8 @@ package com.gfyt.core.web;
 
 import com.gfyt.core.service.BaseService;
 import com.gfyt.core.storage.entity.AbstoryFileEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,15 +27,17 @@ import javax.servlet.http.HttpServletResponse;
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
+@Controller
+@RequestMapping("/test")
 public class TestController
 {
 	//	private final Logger logger = LoggerFactory.getLogger(TestController.class);
 	BaseService<AbstoryFileEntity> baseService;
 
-	@RequestMapping(value = "/test")
-	public void test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
+	@RequestMapping(value = "/v1")
+	public String test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
 	{
-		//TODO 暂未实现 by hanxu at 18-9-25-上午10:03
+		return  "hello,core";
 
 	}
 			
