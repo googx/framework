@@ -31,6 +31,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>common</artifactId>
+                <version>${version-framework-core}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
  
             <dependency>
                 <groupId>com.gfyt.vrv</groupId>
@@ -45,5 +53,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 
 </project>

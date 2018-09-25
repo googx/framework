@@ -31,10 +31,33 @@
 
     <dependencies>
 
+        <!-- ###START###分布式引入方式###START###-->
+        <!--
+                <dependency>
+                    <groupId>com.gfyt.vrv</groupId>
+                    <artifactId>service-api</artifactId>
+                </dependency>
+
+                <dependency>
+                    <groupId>com.gfyt.vrv</groupId>
+                    <artifactId>storage-api</artifactId>
+                </dependency>
+ -->
+        <!-- ###END###分布式引入方式###END###-->
+
+
+        <!-- ###START###单机引入方式###START###-->
         <dependency>
             <groupId>com.gfyt.vrv</groupId>
-            <artifactId>service-api</artifactId>
+            <artifactId>service-impl</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.gfyt.vrv</groupId>
+            <artifactId>storage-db</artifactId>
+        </dependency>
+        <!-- ###END###单机引入方式###END###-->
+
 
         <dependency>
             <groupId>com.gfyt.vrv</groupId>
@@ -55,5 +78,23 @@
 
     </dependencies>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>jjjj</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

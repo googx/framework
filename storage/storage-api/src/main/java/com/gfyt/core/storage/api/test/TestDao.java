@@ -21,6 +21,7 @@ import com.gfyt.core.storage.api.BaseDao;
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
+
 public interface TestDao extends BaseDao<TestEntity>
 {
 

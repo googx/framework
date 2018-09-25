@@ -3,6 +3,9 @@ package com.gfyt.core.storage.db.test;
 import com.gfyt.core.bean.entity.BaseResult;
 import com.gfyt.core.bean.entity.test.TestEntity;
 import com.gfyt.core.storage.api.test.TestDao;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
 
 /**
  * <b>功能说明:</b><p>
@@ -22,8 +25,17 @@ import com.gfyt.core.storage.api.test.TestDao;
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
+@Repository
 public class TestDaoImpl implements TestDao
 {
+
+	Logger logger = LoggerFactory.getLogger(TestDaoImpl.class);
+
+	public TestDaoImpl()
+	{
+		logger.info("TestDaoImpl()==>启动测试TestDaoImpl");
+		System.out.println("TestDaoImpl()==>启动测试TestDaoImpl");
+	}
 
 	@Override
 	public BaseResult save(TestEntity entity)

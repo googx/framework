@@ -38,9 +38,24 @@
                 <scope>import</scope>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>common</artifactId>
+                <version>${version-framework-core}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>com.gfyt.vrv</groupId>
                 <artifactId>service-api</artifactId>
+                <version>${version-framework-service-api}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>service-impl</artifactId>
                 <version>${version-framework-service-api}</version>
             </dependency>
 

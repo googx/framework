@@ -16,31 +16,23 @@
         <module>springboot</module>
     </modules>
 
-    <dependencyManagement>
 
+    <properties>
+        <version-common-utils>1.0-SNAPSHOT</version-common-utils>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>common-utils</artifactId>
+                <version>${version-common-utils}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-
-        <!--<dependency>
-            <groupId>com.gfyt.demo</groupId>
-            <artifactId>clientweb-springboot</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.gfyt.demo</groupId>
-            <artifactId>client-utils</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>-->
+       
 
     </dependencies>
 

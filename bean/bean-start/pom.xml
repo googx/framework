@@ -15,13 +15,13 @@
         导入工程模块下所有module
     </description>
 
-    <dependencies>
+    <!--<dependencies>
         <dependency>
             <groupId>com.gfyt.vrv</groupId>
             <artifactId>bean-entity</artifactId>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-    </dependencies>
+    </dependencies>-->
 
 </project>
