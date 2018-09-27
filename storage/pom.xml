@@ -11,14 +11,14 @@
     <artifactId>storage</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>storage-api</module>
-
-        <module>storage-db</module>
+        <module>src/main/storage-api</module>
+        <module>src/main/storage-db</module>
+        <module>src/main/storage-entity</module>
     </modules>
 
     <properties>
         <version-storage-api>1.0-SNAPSHOT</version-storage-api>
-        <!--<version-storage-entity>1.0-SNAPSHOT</version-storage-entity>-->
+        <version-storage-entity>1.0-SNAPSHOT</version-storage-entity>
         <version-storage-db>1.0-SNAPSHOT</version-storage-db>
         <!-- ###START###第三方框架,版本控制###START###-->
         <!-- 在mybatis-spring-start- 1.3.1的版本为依赖345 -->
@@ -60,6 +60,12 @@
                 <version>${version-storage-db}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.gfyt.vrv</groupId>
+                <artifactId>storage-entity</artifactId>
+                <version>${version-storage-entity}</version>
+            </dependency>
+
             <!--  <dependency>
                   <groupId>org.mybatis</groupId>
                   <artifactId>mybatis</artifactId>
@@ -70,5 +76,33 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--  <build>
+          <plugins>
+              <plugin>
+                  <groupId>org.mybatis.generator</groupId>
+                  <artifactId>mybatis-generator-maven-plugin</artifactId>
+                  <version>1.3.6</version>
+                  <configuration>
+                      <configurationFile>src/main/resources/mybatis/generator/generatorConfig.xml</configurationFile>
+                      <verbose>true</verbose>
+                      <overwrite>true</overwrite>
+                  </configuration>
+                  &lt;!&ndash; <executions>
+                       <execution>
+                           <goals>
+                               <goal>compile</goal>
+                           </goals>
+                       </execution>
+                   </executions>&ndash;&gt;
+                  <dependencies>
+                      <dependency>
+                          <groupId>org.mybatis.generator</groupId>
+                          <artifactId>mybatis-generator-core</artifactId>
+                          <version>1.3.6</version>
+                      </dependency>
+                  </dependencies>
+              </plugin>
+          </plugins>
+      </build>-->
 
 </project>

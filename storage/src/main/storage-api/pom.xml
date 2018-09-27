@@ -15,8 +15,19 @@
 
         <dependency>
             <groupId>com.gfyt.vrv</groupId>
-            <artifactId>bean-entity</artifactId>
+            <artifactId>storage-entity</artifactId>
+            
         </dependency>
+        <!--<dependency>
+            <groupId>com.gfyt.vrv</groupId>
+            <artifactId>storage-entity</artifactId>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -79,7 +79,7 @@
     </dependencies>
 
 
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -87,7 +87,7 @@
                 <executions>
                     <execution>
                         <id>jjjj</id>
-                        <phase>package</phase>
+                        <phase>site</phase>
                         <goals>
                             <goal>run</goal>
                         </goals>
@@ -95,6 +95,6 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 
 </project>

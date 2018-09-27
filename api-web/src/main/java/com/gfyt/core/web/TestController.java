@@ -4,6 +4,7 @@ import com.gfyt.core.bean.entity.BaseResult;
 import com.gfyt.core.bean.entity.test.TestEntity;
 import com.gfyt.core.service.test.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -37,12 +38,13 @@ public class TestController
 	private TestService testService;
 
 	@RequestMapping(value = "/v1")
-	public String test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
+	public ResponseEntity<TestEntity> test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
 	{
 
 		TestEntity entity = new TestEntity();
 		BaseResult save = testService.save(entity);
-		return "ok";
+		ResponseEntity<TestEntity> ok = ResponseEntity.ok(entity);
+		return ok;
 	}
 			
 }

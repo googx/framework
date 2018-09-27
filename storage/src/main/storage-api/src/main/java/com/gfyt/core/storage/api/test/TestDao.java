@@ -1,6 +1,8 @@
-package com.gfyt.core.bean.entity;
+package com.gfyt.core.storage.api.test;
 
-import java.io.File;
+import com.gfyt.core.bean.entity.test.TestEntity;
+import com.gfyt.core.storage.api.BaseDao;
+import org.springframework.stereotype.Repository;
 
 /**
  * <b>功能说明:</b><p>
@@ -13,24 +15,15 @@ import java.io.File;
  * </p>
  *
  * @author hanxu
- * @CreateDate 2018-09-21 下午4:25
+ * @CreateDate 2018-09-25 下午12:02
  * @Encoding UTF-8
  * @Version 1.0
  * @NeedThreadSave false
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
-public class AbstoryFileEntity implements BaseFileEntity
+@Repository
+public interface TestDao extends BaseDao<TestEntity>
 {
-
-	File folder;
-	String name;
-
-	@Override
-	public File getEntity()
-	{
-		//暂未实现 by hanxu at 18-9-21-下午4:27
-		return null;
-	}
 
 }
