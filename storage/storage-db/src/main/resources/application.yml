@@ -2,3 +2,7 @@ mybatis:
   mapper-locations:
     - classpath:mybatis/mapper/*.xml
     - classpath:mybatis/mapper/**/*.xml
+spring:
+  datasource:
+    hikari:
+      data-source-properties: useSSL:false
