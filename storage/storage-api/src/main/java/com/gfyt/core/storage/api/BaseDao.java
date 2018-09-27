@@ -1,4 +1,4 @@
-package com.gfyt.core.service;
+package com.gfyt.core.storage.api;
 
 import com.gfyt.core.bean.entity.core.BaseEntity;
 import com.gfyt.core.bean.entity.core.BaseResult;
@@ -14,14 +14,12 @@ import com.gfyt.core.bean.entity.core.BaseResult;
  * </p>
  *
  * @author hanxu
- * @CreateDate 2018-09-21 下午3:54
+ * @CreateDate 2018-09-21 下午2:53
  * @Encoding UTF-8
  * @Version 1.0
  * @NeedThreadSave false
- * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
- * @QQ:940274999
  */
-public interface BaseService<T extends BaseEntity>
+public interface BaseDao<T extends BaseEntity>
 {
 	public BaseResult save(T entity);
 

@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    include: datasource
+#  mapper-locations: com/gfyt/core/storage/db/mapper/*.xml

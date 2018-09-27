@@ -1,8 +1,10 @@
 package com.gfyt.core.web;
 
-import com.gfyt.core.bean.entity.BaseResult;
-import com.gfyt.core.bean.entity.test.TestEntity;
+import com.gfyt.core.bean.entity.Test1;
+import com.gfyt.core.bean.entity.core.BaseResult;
 import com.gfyt.core.service.test.TestService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -33,18 +35,21 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/test")
 public class TestController
 {
-	//	private final Logger logger = LoggerFactory.getLogger(TestController.class);
+	private final Logger logger = LoggerFactory.getLogger(TestController.class);
 	@Autowired
 	private TestService testService;
 
 	@RequestMapping(value = "/v1")
-	public ResponseEntity<TestEntity> test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
+	public ResponseEntity<Test1> test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
 	{
 
-		TestEntity entity = new TestEntity();
+		Test1 entity = new Test1();
+		entity.setTname("sdf");
 		BaseResult save = testService.save(entity);
-		ResponseEntity<TestEntity> ok = ResponseEntity.ok(entity);
+		logger.info("test()==>"+save.get());
+
+		ResponseEntity<Test1> ok = ResponseEntity.ok(entity);
 		return ok;
 	}
-			
+
 }

@@ -1,5 +1,6 @@
 package com.gfyt.core.web;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -28,6 +29,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan("com.gfyt")
+//"com.gfyt.core.storage.db.api",
+@MapperScan(value = {"com.gfyt.core.storage.db.api"})
 public class MainStarter
 {
 	private final Logger logger = LoggerFactory.getLogger(MainStarter.class);
