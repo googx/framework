@@ -17,7 +17,7 @@
         <conf-gen-jdbcURL>jdbc:mysql://192.168.0.2:3306/framework</conf-gen-jdbcURL>
         <conf-gen-jdbcUserId>framework_write</conf-gen-jdbcUserId>
         <conf-gen-jdbcPassword>framework_write</conf-gen-jdbcPassword>
-        <conf-gen-overwrite>true</conf-gen-overwrite>
+        <conf-gen-overwrite>false</conf-gen-overwrite>
         <conf-gen-configurationFile>src/main/resources/mybatis/generator/generatorConfig.xml</conf-gen-configurationFile>
         <conf-gen-includeCompileDependencies>true</conf-gen-includeCompileDependencies>
     </properties>
@@ -61,18 +61,17 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-core</artifactId>
-            <version>1.3.6</version>
-        </dependency>
+        <!-- <dependency>
+             <groupId>org.mybatis.generator</groupId>
+             <artifactId>mybatis-generator-core</artifactId>
+             <version>1.3.6</version>
+         </dependency>
 
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-            <version>1.3.6</version>
-
-        </dependency>
+         <dependency>
+             <groupId>org.mybatis.generator</groupId>
+             <artifactId>mybatis-generator-maven-plugin</artifactId>
+             <version>1.3.6</version>
+         </dependency>-->
 
     </dependencies>
     <build>
@@ -99,13 +98,14 @@
                     <jdbcPassword>${conf-gen-jdbcPassword}</jdbcPassword>
                     <includeCompileDependencies>${conf-gen-includeCompileDependencies}</includeCompileDependencies>
                 </configuration>
-                <executions>
+                <!--<executions>
                     <execution>
                         <goals>
+                            不要打开,否则在package的流程都会进行生成代码.
                             <goal>generate</goal>
                         </goals>
                     </execution>
-                </executions>
+                </executions>-->
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
