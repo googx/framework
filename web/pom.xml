@@ -3,13 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>apiTester</artifactId>
-        <groupId>com.gfyt.vrv</groupId>
+        <artifactId>framework</artifactId>
+        <groupId>com.gfyt</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>api-web</artifactId>
+    <artifactId>web</artifactId>
 
 
     <dependencyManagement>
@@ -17,7 +17,7 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.gfyt.vrv</groupId>
+                <groupId>com.gfyt</groupId>
                 <artifactId>service</artifactId>
                 <version>${version-framework-core}</version>
                 <type>pom</type>
@@ -34,12 +34,12 @@
         <!-- ###START###分布式引入方式###START###-->
         <!--
                 <dependency>
-                    <groupId>com.gfyt.vrv</groupId>
+                    <groupId>com.gfyt</groupId>
                     <artifactId>service-api</artifactId>
                 </dependency>
 
                 <dependency>
-                    <groupId>com.gfyt.vrv</groupId>
+                    <groupId>com.gfyt</groupId>
                     <artifactId>storage-api</artifactId>
                 </dependency>
  -->
@@ -48,19 +48,19 @@
 
         <!-- ###START###单机引入方式###START###-->
         <dependency>
-            <groupId>com.gfyt.vrv</groupId>
+            <groupId>com.gfyt</groupId>
             <artifactId>service-impl</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.gfyt.vrv</groupId>
+            <groupId>com.gfyt</groupId>
             <artifactId>storage-db</artifactId>
         </dependency>
         <!-- ###END###单机引入方式###END###-->
 
 
         <dependency>
-            <groupId>com.gfyt.vrv</groupId>
+            <groupId>com.gfyt</groupId>
             <artifactId>common-utils</artifactId>
         </dependency>
 

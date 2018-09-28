@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>storage</artifactId>
-        <groupId>com.gfyt.vrv</groupId>
+        <groupId>com.gfyt</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,9 +14,9 @@
 
     <properties>
         <conf-gen-jdbcDriver>com.mysql.jdbc.Driver</conf-gen-jdbcDriver>
-        <conf-gen-jdbcURL>jdbc:mysql://192.168.0.2:3306/apiTester</conf-gen-jdbcURL>
-        <conf-gen-jdbcUserId>apitest_write</conf-gen-jdbcUserId>
-        <conf-gen-jdbcPassword>apitest_write</conf-gen-jdbcPassword>
+        <conf-gen-jdbcURL>jdbc:mysql://192.168.0.2:3306/framework</conf-gen-jdbcURL>
+        <conf-gen-jdbcUserId>framework_write</conf-gen-jdbcUserId>
+        <conf-gen-jdbcPassword>framework_write</conf-gen-jdbcPassword>
         <conf-gen-overwrite>true</conf-gen-overwrite>
         <conf-gen-configurationFile>src/main/resources/mybatis/generator/generatorConfig.xml</conf-gen-configurationFile>
         <conf-gen-includeCompileDependencies>true</conf-gen-includeCompileDependencies>
@@ -25,13 +25,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.gfyt.vrv</groupId>
+            <groupId>com.gfyt</groupId>
             <artifactId>storage-api</artifactId>
         </dependency>
 
 
         <dependency>
-            <groupId>com.gfyt.vrv</groupId>
+            <groupId>com.gfyt</groupId>
             <artifactId>common-utils</artifactId>
         </dependency>
 
@@ -114,7 +114,7 @@
                     </dependency>
 
                     <dependency>
-                        <groupId>com.gfyt.vrv</groupId>
+                        <groupId>com.gfyt</groupId>
                         <artifactId>test-generator</artifactId>
                         <version>1.0-SNAPSHOT</version>
                     </dependency>
