@@ -143,15 +143,15 @@
     <distributionManagement>
 
         <repository>
-            <id>apiTester-release</id>
-            <name>apiTester-release</name>
-            <url>http://nexus.gfyt.lan/repository/gfytDevRepo</url>
+            <id>framework-release</id>
+            <name>framework-release</name>
+            <url>http://nexus.gfyt.lan/repository/gfytReleaseRepo</url>
             <uniqueVersion>true</uniqueVersion>
         </repository>
         <snapshotRepository>
-            <id>thriftDemo-snapshot</id>
-            <name>thriftDemo-snapshot</name>
-            <url>http://nexus.gfyt.lan/repository/gfyt-snapshots</url>
+            <id>framework-snapshot</id>
+            <name>framework-snapshot</name>
+            <url>http://nexus.gfyt.lan/repository/gfytDevRepo</url>
             <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
