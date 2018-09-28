@@ -5,4 +5,7 @@ mybatis:
 spring:
   datasource:
     hikari:
-      data-source-properties: useSSL:false
+      data-source-properties:
+        useSSL: false
+        useUnicode: true
+        characterEncoding: utf-8

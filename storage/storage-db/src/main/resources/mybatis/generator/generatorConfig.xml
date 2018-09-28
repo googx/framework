@@ -4,7 +4,7 @@
 
 <generatorConfiguration>
     <!--导入属性配置 -->
-    <properties resource="mybatis/generator/generator.properties"></properties>
+    <!--<properties resource="mybatis/generator/generatnerator.properties"></properties>-->
 
     <!--指定特定数据库的jdbc驱动jar包的位置 -->
     <!--<classPathEntry location="${jdbc.driverLocation}"/>-->
@@ -33,13 +33,24 @@
 
 
         <!--jdbc的数据库连接 -->
-        <jdbcConnection driverClass="${jdbc.driverClass}" connectionURL="${jdbc.connectionURL}" userId="${jdbc.userId}" password="${jdbc.password}">
+        <jdbcConnection driverClass="${conf-gen-jdbcDriver}"
+                        connectionURL="${conf-gen-jdbcURL}"
+                        userId="${conf-gen-jdbcUserId}"
+                        password="${conf-gen-jdbcPassword}">
         </jdbcConnection>
 
 
-        <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
+        <!--
+            true：使用BigDecimal对应DECIMAL和 NUMERIC数据类型
+            false：默认,
+               scale>0;length>18：使用BigDecimal;
+               scale=0;length[10,18]：使用Long；
+               scale=0;length[5,9]：使用Integer；
+               scale=0;length<5：使用Short；
+
+         非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
         <javaTypeResolver>
-            <property name="forceBigDecimals" value="true"/>
+            <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
         <!-- Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类
@@ -48,7 +59,7 @@
         -->
         <javaModelGenerator targetPackage="com.gfyt.core.bean.entity" targetProject="../storage-entity/src/main/java">
             <!-- 是否对model添加 构造函数 -->
-            <property name="constructorBased" value="true"/>
+            <property name="constructorBased" value="false"/>
 
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <property name="enableSubPackages" value="false"/>
@@ -107,6 +118,7 @@
 
         <table tableName="%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
+
         </table>
 
         <!--<table tableName="test1" schema="apiTester">

@@ -7,15 +7,6 @@ public class Test1 extends BaseEntity {
 
     private String tname;
 
-    public Test1(Integer tid, String tname) {
-        this.tid = tid;
-        this.tname = tname;
-    }
-
-    public Test1() {
-        super();
-    }
-
     public Integer getTid() {
         return tid;
     }

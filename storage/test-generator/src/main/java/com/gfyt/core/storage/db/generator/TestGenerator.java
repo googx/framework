@@ -2,6 +2,7 @@ package com.gfyt.core.storage.db.generator;
 
 import org.mybatis.generator.api.dom.java.CompilationUnit;
 import org.mybatis.generator.codegen.AbstractXmlGenerator;
+import org.mybatis.generator.config.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,13 +28,14 @@ import java.util.*;
  */
 public class TestGenerator extends org.mybatis.generator.codegen.AbstractJavaClientGenerator
 {
+	//	http://www.mybatis.org/generator/running/runningWithJava.html
 
 	private Logger logger = LoggerFactory.getLogger(TestGenerator.class);
 
 	public TestGenerator()
 	{
 		super(true);
-
+		Configuration configuration = new Configuration();
 	}
 
 	public TestGenerator(boolean requiresXMLGenerator)
