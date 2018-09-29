@@ -44,8 +44,7 @@ public class TestServiceImpl implements TestService
 	@Override
 	public BaseResult save(Test entity)
 	{
-		int insert = testDao.insert(entity);
-		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
+		int insert = testDao.insertSelective(entity);
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.save()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
 		return new FinalResult<Integer>(insert);
 	}

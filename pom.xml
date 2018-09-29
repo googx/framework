@@ -36,6 +36,7 @@
         <module>service</module>
         <module>web</module>
         <module>bean</module>
+        <module>unitTest</module>
     </modules>
 
 

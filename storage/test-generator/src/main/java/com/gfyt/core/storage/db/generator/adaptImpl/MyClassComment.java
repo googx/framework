@@ -34,6 +34,9 @@ public class MyClassComment implements ClassComment
 {
 	private final Logger logger = LoggerFactory.getLogger(MyClassComment.class);
 
+
+	//TODO 给类加表头注释,作者信息,各种注解.修改类名
+
 	public CustomCommentGenerator customCommentGenerator;
 	public MyClassComment(CustomCommentGenerator customCommentGenerator){
 		this.customCommentGenerator=customCommentGenerator;
@@ -58,6 +61,7 @@ public class MyClassComment implements ClassComment
 	@Override
 	public void addModelClassComment(TopLevelClass topLevelClass, IntrospectedTable introspectedTable)
 	{
+
 		//TODO 暂未实现 by hanxu at 18-9-29-下午4:04
 		logger.warn("com.gfyt.core.storage.db.generator.adaptImpl.MyClassComment.addModelClassComment()==>方法暂未实现 by hanxu at 18-9-29-下午4:04");
 

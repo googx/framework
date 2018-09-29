@@ -9,18 +9,18 @@ public class Test extends BaseEntity {
     /**
      *   主键id
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @NotNull
     @Size(max = 10)
     private Integer id;
 
     /**
-     *   test-name 
+     *   test-name
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @NotNull
     @Size(max = 10)
@@ -29,8 +29,8 @@ public class Test extends BaseEntity {
     /**
      *   test age
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @NotNull
     @Size(max = 10)
@@ -39,26 +39,26 @@ public class Test extends BaseEntity {
     /**
      *   钱
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @Size(max = 10)
     private Integer money;
 
     /**
-     *   虚拟动态生成列,钱*age 
+     *   虚拟动态生成列,钱*age
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @Size(max = 10)
     private Integer genmoney;
 
     /**
-     *   虚拟动态生成持久列,钱*age*2 
+     *   虚拟动态生成持久列,钱*age*2
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @Size(max = 10)
     private Integer genmoney2;
@@ -66,8 +66,8 @@ public class Test extends BaseEntity {
     /**
      *   创建日期
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     @Size(max = 19)
     private Date createtime;
@@ -78,8 +78,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.id
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public Integer getId() {
         return id;
@@ -91,8 +91,8 @@ public class Test extends BaseEntity {
      *
      * @param id the value for test.id
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setId(Integer id) {
         this.id = id;
@@ -104,8 +104,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.NAME
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public String getName() {
         return name;
@@ -117,8 +117,8 @@ public class Test extends BaseEntity {
      *
      * @param name the value for test.NAME
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
@@ -130,8 +130,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.age
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public Integer getAge() {
         return age;
@@ -143,8 +143,8 @@ public class Test extends BaseEntity {
      *
      * @param age the value for test.age
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setAge(Integer age) {
         this.age = age;
@@ -156,8 +156,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.money
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public Integer getMoney() {
         return money;
@@ -169,8 +169,8 @@ public class Test extends BaseEntity {
      *
      * @param money the value for test.money
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setMoney(Integer money) {
         this.money = money;
@@ -182,8 +182,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.genMoney
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public Integer getGenmoney() {
         return genmoney;
@@ -195,8 +195,8 @@ public class Test extends BaseEntity {
      *
      * @param genmoney the value for test.genMoney
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setGenmoney(Integer genmoney) {
         this.genmoney = genmoney;
@@ -208,8 +208,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.genMoney2
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public Integer getGenmoney2() {
         return genmoney2;
@@ -221,8 +221,8 @@ public class Test extends BaseEntity {
      *
      * @param genmoney2 the value for test.genMoney2
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setGenmoney2(Integer genmoney2) {
         this.genmoney2 = genmoney2;
@@ -234,8 +234,8 @@ public class Test extends BaseEntity {
      *
      * @return the value of test.createTime
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public Date getCreatetime() {
         return createtime;
@@ -247,8 +247,8 @@ public class Test extends BaseEntity {
      *
      * @param createtime the value for test.createTime
      *
-    * @date  2018-09-29 16:54:24
-    * @author 
+    * @date  2018-09-29 17:04:44
+    * @author
      */
     public void setCreatetime(Date createtime) {
         this.createtime = createtime;

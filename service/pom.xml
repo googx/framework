@@ -59,6 +59,7 @@
                 <version>${version-framework-service-api}</version>
             </dependency>
 
+
         </dependencies>
 
     </dependencyManagement>

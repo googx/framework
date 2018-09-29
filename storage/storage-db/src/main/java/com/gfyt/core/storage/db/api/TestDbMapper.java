@@ -16,7 +16,7 @@ package com.gfyt.core.storage.db.api;
  * @Version 1.0
  * @NeedThreadSave false
  */
-public interface TestDbMapper extends TestMapper
+public interface TestDbMapper // extends TestMapper
 {
 
 }

@@ -1,5 +1,5 @@
 package com.gfyt.core.web;
- 
+
 import com.gfyt.core.bean.entity.Test;
 import com.gfyt.core.bean.entity.core.BaseResult;
 import com.gfyt.core.service.test.TestService;
@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -40,15 +41,16 @@ public class TestController
 	private TestService testService;
 
 	@RequestMapping(value = "/v1")
-	public ResponseEntity<Test> test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
+	public ResponseEntity test(HttpServletRequest httpRequest, HttpServletResponse httpResponse, @RequestBody Test entity) throws Exception
 	{
-
-		Test entity = new Test();
-		entity.setName("asdf");
-		BaseResult save = testService.save(entity);
-		logger.info("test()==>"+save.get());
+		BaseResult<Integer> save = testService.save(entity);
+		save.get();
+		logger.info("test()==>" + save.get());
 
 		ResponseEntity<Test> ok = ResponseEntity.ok(entity);
+		//.w.s.m.s.DefaultHandlerExceptionResolver : Failed to write HTTP message: org.springframework.http.converter.HttpMessageNotWritableException:
+		// No converter found for return value of type: class com.gfyt.core.bean.entity.core.FinalResult
+		//		ResponseEntity<BaseResult> ok1 = ResponseEntity.ok(save);
 		return ok;
 	}
 

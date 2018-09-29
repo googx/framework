@@ -5,6 +5,7 @@ import com.gfyt.core.storage.db.generator.adaptImpl.MyClassComment;
 import com.gfyt.core.storage.db.generator.adaptImpl.MyFileComment;
 import com.gfyt.core.storage.db.generator.adaptImpl.MyJavaDocTagComment;
 import com.gfyt.core.storage.db.generator.adaptInterface.*;
+import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.dom.java.*;
@@ -39,7 +40,7 @@ public class MyCommentGeneratorAdapt extends DefaultCommentGenerator implements 
 	AlterFieldComment alterFieldComment = new MyAddFieldComment(this);
 	JavaFileComment javaFileComment = new MyFileComment(this);
 	ClassComment classComment = new MyClassComment(this);
-	JavaDocTagComment javaDocTagComment=new MyJavaDocTagComment(this);
+	JavaDocTagComment javaDocTagComment = new MyJavaDocTagComment(this);
 	private Logger logger = LoggerFactory.getLogger(MyCommentGeneratorAdapt.class);
 
 	protected Properties properties;
@@ -96,13 +97,13 @@ public class MyCommentGeneratorAdapt extends DefaultCommentGenerator implements 
 	@Override
 	public void addJavadocTag(JavaElement javaElement, boolean markAsDoNotDelete)
 	{
-		javaDocTagComment.addJavadocTag(javaElement,markAsDoNotDelete );
+		javaDocTagComment.addJavadocTag(javaElement, markAsDoNotDelete);
 	}
 
 	@Override
 	public void addJavadocTag(JavaElement javaElement, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn, boolean markAsDoNotDelete)
 	{
-		javaDocTagComment.addJavadocTag(javaElement,introspectedTable ,introspectedColumn ,markAsDoNotDelete );
+		javaDocTagComment.addJavadocTag(javaElement, introspectedTable, introspectedColumn, markAsDoNotDelete);
 	}
 
 	@Override
@@ -114,8 +115,8 @@ public class MyCommentGeneratorAdapt extends DefaultCommentGenerator implements 
 	@Override
 	public String getAuthor()
 	{
-		//TODO 暂未实现 by hanxu at 18-9-29-下午4:37
-		logger.warn("com.gfyt.core.storage.db.generator.MyCommentGeneratorAdapt.getAuthor()==>方法暂未实现 by hanxu at 18-9-29-下午4:37");
-		return null;
+		String username = System.getProperty("user.name");
+		username = StringUtils.isEmpty(username) ? " " : username;
+		return username;
 	}
 }
