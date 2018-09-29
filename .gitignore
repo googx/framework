@@ -9,7 +9,8 @@
 .tmp/
 output.txt
 __pycache__
-
+.ideaDataSources/
+dataSources/
 target/
 *.jar
 out/

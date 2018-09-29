@@ -10,6 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>storage-entity</artifactId>
- 
+
+
+    <dependencies>
+
+        <!-- 由SpringBoot-2.0.1.RELEASE定义.-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

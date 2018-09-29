@@ -1,6 +1,6 @@
 package com.gfyt.core.web;
-
-import com.gfyt.core.bean.entity.Test1;
+ 
+import com.gfyt.core.bean.entity.Test;
 import com.gfyt.core.bean.entity.core.BaseResult;
 import com.gfyt.core.service.test.TestService;
 import org.slf4j.Logger;
@@ -40,15 +40,15 @@ public class TestController
 	private TestService testService;
 
 	@RequestMapping(value = "/v1")
-	public ResponseEntity<Test1> test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
+	public ResponseEntity<Test> test(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws Exception
 	{
 
-		Test1 entity = new Test1();
-		entity.setTname("sdf");
+		Test entity = new Test();
+		entity.setName("asdf");
 		BaseResult save = testService.save(entity);
 		logger.info("test()==>"+save.get());
 
-		ResponseEntity<Test1> ok = ResponseEntity.ok(entity);
+		ResponseEntity<Test> ok = ResponseEntity.ok(entity);
 		return ok;
 	}
 

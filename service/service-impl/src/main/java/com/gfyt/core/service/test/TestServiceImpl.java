@@ -1,9 +1,9 @@
 package com.gfyt.core.service.test;
 
-import com.gfyt.core.bean.entity.Test1;
+import com.gfyt.core.bean.entity.Test;
 import com.gfyt.core.bean.entity.core.BaseResult;
 import com.gfyt.core.bean.entity.core.FinalResult;
-import com.gfyt.core.storage.db.api.Test1Mapper;
+import com.gfyt.core.storage.db.api.TestMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class TestServiceImpl implements TestService
 {
 	Logger logger = LoggerFactory.getLogger(TestServiceImpl.class);
 	@Autowired
-	Test1Mapper testDao;
+	TestMapper testDao;
 
 	TestServiceImpl()
 	{
@@ -42,7 +42,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult save(Test1 entity)
+	public BaseResult save(Test entity)
 	{
 		int insert = testDao.insert(entity);
 		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
@@ -51,7 +51,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult update(Test1 entity)
+	public BaseResult update(Test entity)
 	{
 		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.update()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
@@ -59,7 +59,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult delete(Test1 entity)
+	public BaseResult delete(Test entity)
 	{
 		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.delete()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
@@ -67,7 +67,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult query(Test1 entity)
+	public BaseResult query(Test entity)
 	{
 		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.query()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
