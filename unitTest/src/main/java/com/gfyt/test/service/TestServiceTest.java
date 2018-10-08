@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -27,8 +28,10 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @webSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
-@SpringBootTest
-@RunWith(SpringRunner.class)
+//@SpringBootTest
+//@RunWith(SpringRunner.class)
+//	 SpringJUnit支持，由此引入Spring-Test框架支持
+@RunWith(SpringJUnit4ClassRunner.class)
 public class TestServiceTest
 {
 	private final Logger logger = LoggerFactory.getLogger(TestServiceTest.class);
