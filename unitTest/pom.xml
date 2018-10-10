@@ -10,6 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>unitTest</artifactId>
+    <properties>
+        <skipjavedoc>true</skipjavedoc>
+    </properties>
 
     <dependencyManagement>
 
