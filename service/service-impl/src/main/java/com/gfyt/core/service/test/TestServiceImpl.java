@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.*;
+
 /**
  * <b>功能说明:</b><p>
  * 一些说明写这里
@@ -66,10 +68,18 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult query(Test entity)
+	public BaseResult<Test> queryOneByPrimary(Test entity)
 	{
-		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
-		logger.warn("com.gfyt.core.service.test.TestServiceImpl.query()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
+		Test test = testDao.selectByPrimaryKey(entity.getId());
+		FinalResult<Test> testFinalResult = new FinalResult<>(test);
+		return testFinalResult;
+	}
+
+	@Override
+	public BaseResult<List<Test>> queryList(Test entity)
+	{
+		//暂未实现 by hanxu at 18-10-13-下午4:33
 		return null;
 	}
+
 }

@@ -3,6 +3,8 @@ package com.gfyt.core.service;
 import com.gfyt.core.bean.entity.core.BaseEntity;
 import com.gfyt.core.bean.entity.core.BaseResult;
 
+import java.util.*;
+
 /**
  * <b>功能说明:</b><p>
  * 一些说明写这里
@@ -29,5 +31,12 @@ public interface BaseService<T extends BaseEntity>
 
 	public BaseResult delete(T entity);
 
-	public BaseResult query(T entity);
+	/**
+	 * 查询单实体,必须要一个主键,或者所有的联合主键
+	 * @param entity
+	 * @return
+	 */
+	public BaseResult<T> queryOneByPrimary(T entity);
+
+	public BaseResult<List<T>> queryList(T entity);
 }

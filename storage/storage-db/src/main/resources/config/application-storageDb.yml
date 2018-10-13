@@ -9,3 +9,4 @@ spring:
         useSSL: false
         useUnicode: true
         characterEncoding: utf-8
+      connection-test-query: "select 1"

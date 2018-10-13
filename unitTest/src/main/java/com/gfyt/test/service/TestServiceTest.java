@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import static org.hamcrest.core.Is.is;
+
 /**
  * <b>功能说明:</b><p>
  * 使用springboot提供的单元测试插件,来保证每次更新代码,单元测试能跑通,可以在测试环境先避免一大部分bug
@@ -38,6 +40,7 @@ public class TestServiceTest
 
 	@Autowired
 	TestService service;
+
 
 	@Test
 	public void testAdd(){

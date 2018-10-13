@@ -1,1 +1,3 @@
 SELECT * FROM test;
+
+SELECT 1
