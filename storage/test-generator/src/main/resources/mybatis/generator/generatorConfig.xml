@@ -101,7 +101,7 @@
         <!-- 如果要做 存储层api,和db-api分离出一套.db-api继承存储层api,这里为了方便调试生成器.先这样 -->
         <javaClientGenerator targetPackage="com.gfyt.core.storage.db.api" targetProject="../storage-api/src/main/java"
                              type="XMLMAPPER">
-            <property name="enableSubPackages" value=""/>
+            <property name="enableSubPackages" value="false"/>
             <!--
                     定义Maper.java 源代码中的ByExample() 方法的可视性，可选的值有：
                     public;
@@ -110,12 +110,12 @@
                     default
                     注意：如果 targetRuntime="MyBatis3",此参数被忽略
              -->
-            <property name="exampleMethodVisibility" value=""/>
+            <!--<property name="exampleMethodVisibility" value=""/>-->
             <!--
                                            方法名计数器
               Important note: this property is ignored if the target runtime is MyBatis3.
              -->
-            <property name="methodNameCalculator" value=""/>
+            <!--<property name="methodNameCalculator" value=""/>-->
 
             <!--
                                                 为生成的接口添加父接口
@@ -124,7 +124,8 @@
 
         </javaClientGenerator>
 
-        <table tableName="%" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+        <!---->
+        <table tableName="%" schema="${conf-gen-schema}"  catalog="${conf-gen-catalog}"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
 
         </table>

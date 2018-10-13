@@ -4,7 +4,7 @@ import java.util.*;
 import java.lang.*;
 
 import com.gfyt.core.bean.entity.core.BaseResult;
-import com.gfyt.core.service.test.TestService;
+import com.gfyt.core.service.test.Test1Service;
 import com.gfyt.core.web.MainStarter;
 import com.gfyt.core.web.TestController;
 import org.apache.commons.lang3.*;

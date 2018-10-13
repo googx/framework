@@ -11,8 +11,10 @@
     <artifactId>test-generator</artifactId>
 
     <properties>
-        <conf-gen-jdbcDriver>com.mysql.jdbc.Driver</conf-gen-jdbcDriver>
-        <conf-gen-jdbcURL>jdbc:mysql://192.168.0.2:3306/framework</conf-gen-jdbcURL>
+        <conf-gen-jdbcDriver>com.mysql.cj.jdbc.Driver</conf-gen-jdbcDriver>
+        <conf-gen-jdbcURL>jdbc:mysql://mysql.framework.lan:3306/framework?useSSL=false</conf-gen-jdbcURL>
+        <conf-gen-schema>framework</conf-gen-schema>
+        <conf-gen-catalog>framework</conf-gen-catalog>
         <conf-gen-jdbcUserId>framework_write</conf-gen-jdbcUserId>
         <conf-gen-jdbcPassword>framework_write</conf-gen-jdbcPassword>
         <conf-gen-overwrite>true</conf-gen-overwrite>
@@ -35,6 +37,11 @@
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-maven-plugin</artifactId>
             <version>1.3.6</version>
         </dependency>
     </dependencies>

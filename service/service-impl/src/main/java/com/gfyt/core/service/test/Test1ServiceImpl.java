@@ -1,9 +1,9 @@
 package com.gfyt.core.service.test;
 
-import com.gfyt.core.bean.entity.Test;
+import com.gfyt.core.bean.entity.Test1;
 import com.gfyt.core.bean.entity.core.BaseResult;
 import com.gfyt.core.bean.entity.core.FinalResult;
-import com.gfyt.core.storage.db.api.TestMapper;
+import com.gfyt.core.storage.db.api.Test1Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +30,13 @@ import java.util.*;
  * @QQ:940274999
  */
 @Service
-public class TestServiceImpl implements TestService
+public class Test1ServiceImpl implements Test1Service
 {
-	Logger logger = LoggerFactory.getLogger(TestServiceImpl.class);
+	Logger logger = LoggerFactory.getLogger(Test1ServiceImpl.class);
 	@Autowired
-	TestMapper testDao;
+	Test1Mapper testDao;
 
-	TestServiceImpl()
+	Test1ServiceImpl()
 	{
 		logger.info("com.gfyt.core.service.test.TestServiceImpl()==>启动测试");
 		System.out.println("com.gfyt.core.service.test.TestServiceImpl()==>启动测试");
@@ -44,7 +44,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult save(Test entity)
+	public BaseResult save(Test1 entity)
 	{
 		int insert = testDao.insertSelective(entity);
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.save()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
@@ -52,7 +52,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult update(Test entity)
+	public BaseResult update(Test1 entity)
 	{
 		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.update()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
@@ -60,7 +60,7 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult delete(Test entity)
+	public BaseResult delete(Test1 entity)
 	{
 		//TODO 暂未实现 by hanxu at 18-9-27-下午2:45
 		logger.warn("com.gfyt.core.service.test.TestServiceImpl.delete()==>方法暂未实现 by hanxu at 18-9-27-下午2:45");
@@ -68,15 +68,15 @@ public class TestServiceImpl implements TestService
 	}
 
 	@Override
-	public BaseResult<Test> queryOneByPrimary(Test entity)
+	public BaseResult<Test1> queryOneByPrimary(Test1 entity)
 	{
-		Test test = testDao.selectByPrimaryKey(entity.getId());
-		FinalResult<Test> testFinalResult = new FinalResult<>(test);
+		Test1 test = testDao.selectByPrimaryKey(entity.getId());
+		FinalResult<Test1> testFinalResult = new FinalResult<>(test);
 		return testFinalResult;
 	}
 
 	@Override
-	public BaseResult<List<Test>> queryList(Test entity)
+	public BaseResult<List<Test1>> queryList(Test1 entity)
 	{
 		//暂未实现 by hanxu at 18-10-13-下午4:33
 		return null;

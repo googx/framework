@@ -2,7 +2,7 @@ package com.fraw.junit.test.spring.testCase;
 
 import com.fraw.junit.test.spring.core.BaseSpringTester;
 import com.gfyt.core.bean.entity.core.BaseResult;
-import com.gfyt.core.service.test.TestService;
+import com.gfyt.core.service.test.Test1Service;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,17 +31,17 @@ public class TestServiceTest extends BaseSpringTester
 	private final Logger logger = LoggerFactory.getLogger(TestServiceTest.class);
 
 	@Autowired
-	TestService service;
+	Test1Service service;
 
 	@Test
 	public void test1()
 	{
 		//TODO 暂未实现 by hanxu at 18-10-13-下午4:14
 		logger.info("test1()==>jjj");
-		com.gfyt.core.bean.entity.Test test1 = new com.gfyt.core.bean.entity.Test();
+		com.gfyt.core.bean.entity.Test1 test1 = new com.gfyt.core.bean.entity.Test1();
 		test1.setId(1);
-		BaseResult<com.gfyt.core.bean.entity.Test> testBaseResult = service.queryOneByPrimary(test1);
-		com.gfyt.core.bean.entity.Test test = testBaseResult.get();
+		BaseResult<com.gfyt.core.bean.entity.Test1> testBaseResult = service.queryOneByPrimary(test1);
+		com.gfyt.core.bean.entity.Test1 test = testBaseResult.get();
 		logger.info("test1()==>" + test);
 
 	}
@@ -50,10 +50,10 @@ public class TestServiceTest extends BaseSpringTester
 	public void test2()
 	{
 		logger.info("test1()==>jjj");
-		com.gfyt.core.bean.entity.Test test1 = new com.gfyt.core.bean.entity.Test();
+		com.gfyt.core.bean.entity.Test1 test1 = new com.gfyt.core.bean.entity.Test1();
 		test1.setId(2);
-		BaseResult<com.gfyt.core.bean.entity.Test> testBaseResult = service.queryOneByPrimary(test1);
-		com.gfyt.core.bean.entity.Test test = testBaseResult.get();
+		BaseResult<com.gfyt.core.bean.entity.Test1> testBaseResult = service.queryOneByPrimary(test1);
+		com.gfyt.core.bean.entity.Test1 test = testBaseResult.get();
 		logger.info("test1()==>" + test);
 
 	}

@@ -1,0 +1,3 @@
+需要实现的:
+自己用模板实现一个插件,用来代替mybaties-generator,
+按照模板文件定义的sql结构来快速生成sqlmapper文件.

@@ -1,6 +1,7 @@
 package com.test;
 
-import com.gfyt.core.service.test.TestService;
+import com.gfyt.core.bean.entity.Test1;
+import com.gfyt.core.service.test.Test1Service;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,11 +30,11 @@ public class TestServiceTest
 	private final Logger logger = LoggerFactory.getLogger(TestServiceTest.class);
 
 	@Autowired
-	TestService service;
+	Test1Service service;
 
 	@Test
 	public void testAdd(){
-		com.gfyt.core.bean.entity.Test testentity=new com.gfyt.core.bean.entity.Test();
+		Test1 testentity=new com.gfyt.core.bean.entity.Test1();
 
 		service.save(testentity);
 	}
