@@ -28,7 +28,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @QQ:940274999
  */
 @SpringBootApplication
-@EnableAutoConfiguration
 @ComponentScan("com.gfyt")
 //"com.gfyt.core.storage.db.api",
 @MapperScan(value = {"com.gfyt.core.storage.db.api"})

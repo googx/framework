@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,7 +35,8 @@ import javax.servlet.http.HttpServletResponse;
  * @QQ:940274999
  */
 @Controller
-@RequestMapping(value = "/test",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/test")
+//,produces = MediaType.APPLICATION_JSON_UTF8_VALUE
 public class TestController
 {
 	private final Logger logger = LoggerFactory.getLogger(TestController.class);
@@ -54,5 +56,13 @@ public class TestController
 		//		ResponseEntity<BaseResult> ok1 = ResponseEntity.ok(save);
 		return ok;
 	}
+
+	@RequestMapping(value="/ping")
+	public @ResponseBody
+	 String v2(HttpServletRequest httpRequest,HttpServletResponse httpResponse)throws Exception
+	{
+		 return "success";
+	}
+
 
 }

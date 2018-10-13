@@ -1,10 +1,8 @@
-package com.fraw.junit.test.spring.testCase;
+package com.gfyt.core.web;
 
 import com.gfyt.core.bean.entity.Test1;
 import com.gfyt.core.bean.entity.core.BaseResult;
 import com.gfyt.core.service.test.Test1Service;
-import com.gfyt.core.web.ConfigurationBean;
-import com.gfyt.core.web.TestController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
