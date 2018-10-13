@@ -1,0 +1,5 @@
+自动化测试兼容spring和idea开发工具,
+现在暂时是把测试代码写在了unittest的test里面,
+后期我会改成在各自的工程包里写与包同名的自动化测试用例,
+利用idea提供的功能Alt+Enter创建包名+类名同名称的测试用例,
+然后通过unittest工程加载springboot环境来启动测试用例.
