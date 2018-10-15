@@ -18,6 +18,7 @@
         <!--========end==========版本属性========end==========-->
         <!--========start========其他参数变量========start========-->
         <skiptest>true</skiptest>
+        <mainClass>com.gfyt.core.web.MainStarter</mainClass>
         <skipjavedoc>true</skipjavedoc>
 
         <!--========end==========其他参数变量========end==========-->
@@ -141,6 +142,23 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.16.RELEASE</version>
+                <configuration>
+                   <mainClass>${mainClass}</mainClass>
+                </configuration>
+                <!--<executions>
+                    <execution>
+                        &lt;!&ndash;<phase>deploy</phase>&ndash;&gt;
+
+                    </execution>
+                </executions>-->
+            </plugin>
+
+
             <!--配置生成Javadoc包 -->
             <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
