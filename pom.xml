@@ -12,12 +12,12 @@
     <properties>
         <!--========start========版本属性========start========-->
         <version-framework-core>1.0-SNAPSHOT</version-framework-core>
-        <version-jdk-source>1.8</version-jdk-source>
-        <version-jdk-target>1.8</version-jdk-target>
+        <version-jdk-source>1.7</version-jdk-source>
+        <version-jdk-target>1.7</version-jdk-target>
         <!--========end==========版本属性========end==========-->
         <!--========start========其他参数变量========start========-->
         <skiptest>true</skiptest>
-        <skipjavedoc>false</skipjavedoc>
+        <skipjavedoc>true</skipjavedoc>
         <!--========end==========其他参数变量========end==========-->
     </properties>
 
@@ -26,7 +26,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.0.1.RELEASE</version>
+                <version>1.5.16.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

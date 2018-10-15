@@ -27,8 +27,8 @@
         <version-storage-api>1.0-SNAPSHOT</version-storage-api>
         <version-storage-entity>1.0-SNAPSHOT</version-storage-entity>
         <version-storage-db>1.0-SNAPSHOT</version-storage-db>
-        <!--<version-mysql-connector>5.1.46</version-mysql-connector>-->
-        <version-mysql-connector>8.0.9-rc</version-mysql-connector>
+        <version-mysql-connector>5.1.46</version-mysql-connector>
+        <!--<version-mysql-connector>8.0.9-rc</version-mysql-connector>-->
 
         <!-- ###START###第三方框架,版本控制###START###-->
         <!-- 在mybatis-spring-start- 1.3.1的版本为依赖345 -->
