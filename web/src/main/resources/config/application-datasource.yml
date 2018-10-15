@@ -1,7 +1,7 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 #    allowPublicKeyRetrieval:true
-    url: jdbc:mysql://192.168.0.2:3306/framework?allowPublicKeyRetrieval=true
+    url: jdbc:mysql://mysql.framework.lan:3306/framework?allowPublicKeyRetrieval=true
     username: framework_write
     password: framework_write

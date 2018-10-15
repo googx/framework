@@ -1,6 +1,7 @@
 package com.gfyt.core.service.test;
 
-import com.gfyt.core.bean.entity.Test;
+
+import com.gfyt.core.bean.entity.Test1;
 import com.gfyt.core.service.BaseService;
 
 /**
@@ -21,7 +22,7 @@ import com.gfyt.core.service.BaseService;
  * @WebSite <a href="https://www.thesunboy.com">访问开发者个人主页</a>
  * @QQ:940274999
  */
-public interface TestService extends BaseService<Test>
+public interface Test1Service extends BaseService<Test1>
 {
 
 }

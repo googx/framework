@@ -27,13 +27,13 @@ FLUSH PRIVILEGES;
 # 综上，一般情况下，都使用Virtual Generated Column，这也是MySQL默认的方式，
 # 如果使用Stored Generated Column，前面的建表语句将会是下面这样，即多了一个stored关键字：
 
-CREATE TABLE IF NOT EXISTS framework.test (
+CREATE TABLE IF NOT EXISTS framework.test1 (
   id         INT AUTO_INCREMENT NOT NULL PRIMARY KEY
   COMMENT '主键id',
   NAME       VARCHAR(10)        NOT NULL
-  COMMENT 'test-name ',
+  COMMENT 'test11-name ',
   age        INTEGER(3)         NOT NULL
-  COMMENT 'test age',
+  COMMENT 'test11 age',
   money      INTEGER(5)         NULL
   COMMENT '钱', # https://www.cnblogs.com/lixigang/articles/5082589.html 关于5.7特性,动态生成列的介绍
   genMoney   INTEGER(8) AS (age * money) #     INTEGER(8) AS (sqrt(age * money))
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS framework.test (
   COMMENT '创建日期'
 );
 
-INSERT INTO framework.test (NAME, age, money)
+INSERT INTO framework.test1 (NAME, age, money)
 VALUES (
   'hanxu',
   22,

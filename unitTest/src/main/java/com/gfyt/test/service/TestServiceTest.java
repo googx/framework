@@ -1,6 +1,7 @@
 package com.test;
 
-import com.gfyt.core.service.test.TestService;
+import com.gfyt.core.bean.entity.Test1;
+import com.gfyt.core.service.test.Test1Service;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -9,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.hamcrest.core.Is.is;
 
 /**
  * <b>功能说明:</b><p>
@@ -37,11 +40,12 @@ public class TestServiceTest
 	private final Logger logger = LoggerFactory.getLogger(TestServiceTest.class);
 
 	@Autowired
-	TestService service;
+	Test1Service service;
+
 
 	@Test
 	public void testAdd(){
-		com.gfyt.core.bean.entity.Test testentity=new com.gfyt.core.bean.entity.Test();
+		Test1 testentity=new Test1();
 
 		service.save(testentity);
 	}

@@ -1,15 +1,17 @@
 package com.gfyt.core.web;
 
-import com.gfyt.core.bean.entity.Test;
+import com.gfyt.core.bean.entity.Test1;
 import com.gfyt.core.bean.entity.core.BaseResult;
-import com.gfyt.core.service.test.TestService;
+import com.gfyt.core.service.test.Test1Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,25 +35,34 @@ import javax.servlet.http.HttpServletResponse;
  * @QQ:940274999
  */
 @Controller
-@RequestMapping("/test")
+@RequestMapping(value = "/test")
+//,produces = MediaType.APPLICATION_JSON_UTF8_VALUE
 public class TestController
 {
 	private final Logger logger = LoggerFactory.getLogger(TestController.class);
 	@Autowired
-	private TestService testService;
+	private Test1Service testService;
 
 	@RequestMapping(value = "/v1")
-	public ResponseEntity test(HttpServletRequest httpRequest, HttpServletResponse httpResponse, @RequestBody Test entity) throws Exception
+	public ResponseEntity test(HttpServletRequest httpRequest, HttpServletResponse httpResponse, @RequestBody Test1 entity) throws Exception
 	{
 		BaseResult<Integer> save = testService.save(entity);
 		save.get();
 		logger.info("test()==>" + save.get());
 
-		ResponseEntity<Test> ok = ResponseEntity.ok(entity);
+		ResponseEntity<Test1> ok = ResponseEntity.ok(entity);
 		//.w.s.m.s.DefaultHandlerExceptionResolver : Failed to write HTTP message: org.springframework.http.converter.HttpMessageNotWritableException:
 		// No converter found for return value of type: class com.gfyt.core.bean.entity.core.FinalResult
 		//		ResponseEntity<BaseResult> ok1 = ResponseEntity.ok(save);
 		return ok;
 	}
+
+	@RequestMapping(value="/ping")
+	public @ResponseBody
+	 String v2(HttpServletRequest httpRequest,HttpServletResponse httpResponse)throws Exception
+	{
+		 return "success";
+	}
+
 
 }

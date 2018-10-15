@@ -3,6 +3,7 @@ package com.gfyt.core.web;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,7 +28,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @QQ:940274999
  */
 @SpringBootApplication
-@EnableAutoConfiguration
 @ComponentScan("com.gfyt")
 //"com.gfyt.core.storage.db.api",
 @MapperScan(value = {"com.gfyt.core.storage.db.api"})
