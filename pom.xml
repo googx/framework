@@ -14,10 +14,12 @@
         <version-framework-core>1.0-SNAPSHOT</version-framework-core>
         <version-jdk-source>1.7</version-jdk-source>
         <version-jdk-target>1.7</version-jdk-target>
+        <commons-lang3.version>3.7</commons-lang3.version>
         <!--========end==========版本属性========end==========-->
         <!--========start========其他参数变量========start========-->
         <skiptest>true</skiptest>
         <skipjavedoc>true</skipjavedoc>
+
         <!--========end==========其他参数变量========end==========-->
     </properties>
 
@@ -31,6 +33,16 @@
                 <scope>import</scope>
             </dependency>
 
+
+            <!--========start========暂时兼容降级springboot版本的问题========start========-->
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!--========end==========暂时兼容降级springboot版本的问题========end==========-->
 
         </dependencies>
     </dependencyManagement>
@@ -169,4 +181,6 @@
             <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
+
+
 </project>
