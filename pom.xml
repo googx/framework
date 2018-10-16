@@ -148,39 +148,70 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.5.16.RELEASE</version>
                 <configuration>
-                   <mainClass>${mainClass}</mainClass>
-                </configuration>
-                <!--<executions>
-                    <execution>
-                        &lt;!&ndash;<phase>deploy</phase>&ndash;&gt;
-
-                    </execution>
-                </executions>-->
-            </plugin>
-
-
-            <!--配置生成Javadoc包 -->
-            <!--<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <aggregate>true</aggregate>
-                    <charset>UTF-8</charset>
-                    <docencoding>UTF-8</docencoding>
-                    <skip>${skipjavedoc}</skip>
+                    <classifier>exec</classifier>
+                    <fork>true</fork>
+                    <mainClass>${mainClass}</mainClass>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <username>git</username>
+                    <password>git</password>
+                    <goals>-f pom.xml deploy</goals>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
         </plugins>
+
+        <!--  <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+              <version>1.5.16.RELEASE</version>
+              &lt;!&ndash;<configuration>
+                 <mainClass>${mainClass}</mainClass>
+              </configuration>
+              <executions>
+                  <execution>
+                      <phase>package</phase>
+                  </execution>
+              </executions>&ndash;&gt;
+          </plugin>
+-->
+
+        <!--配置生成Javadoc包 -->
+        <!--<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.10.4</version>
+            <configuration>
+                <encoding>UTF-8</encoding>
+                <aggregate>true</aggregate>
+                <charset>UTF-8</charset>
+                <docencoding>UTF-8</docencoding>
+                <skip>${skipjavedoc}</skip>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>attach-javadocs</id>
+                    <goals>
+                        <goal>jar</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>-->
+
     </build>
 
     <!-- 项目发布 ,id要和maven-setting文件的server节点的id一致 -->
@@ -199,6 +230,13 @@
             <uniqueVersion>true</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
+
+    <!--git 远程仓库配置-->
+    <scm>
+        <connection>scm:git:git@git.gfyt.lan:gfyt/framework.git</connection>
+        <url>git@git.gfyt.lan:gfyt/framework</url>
+        <developerConnection>scm:git:git@git.gfyt.lan:gfyt/framework.git</developerConnection>
+    </scm>
 
 
 </project>

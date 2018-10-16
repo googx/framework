@@ -30,6 +30,11 @@
 
 
     <dependencies>
+<!--        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-tools</artifactId>
+            <version>1.5.16.RELEASE</version>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -80,7 +85,6 @@
 
 
     </dependencies>
-
 
 
 </project>
