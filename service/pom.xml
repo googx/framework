@@ -33,7 +33,7 @@
             <dependency>
                 <groupId>com.gfyt</groupId>
                 <artifactId>storage</artifactId>
-                <version>${version-framework-core}</version>
+                <version>${project.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -42,7 +42,7 @@
             <dependency>
                 <groupId>com.gfyt</groupId>
                 <artifactId>common</artifactId>
-                <version>${version-framework-core}</version>
+                <version>${project.parent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
