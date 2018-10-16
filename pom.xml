@@ -11,7 +11,7 @@
 
     <properties>
         <!--========start========版本属性========start========-->
-        <version-framework-core>1.0-SNAPSHOT</version-framework-core>
+        <version-framework-core>${project.version}</version-framework-core>
         <version-jdk-source>1.7</version-jdk-source>
         <version-jdk-target>1.7</version-jdk-target>
         <commons-lang3.version>3.7</commons-lang3.version>
